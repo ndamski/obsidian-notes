@@ -13,30 +13,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Welcome.md",
+                "file": "REC Research Project/REC Research Project.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Welcome"
-            }
-          },
-          {
-            "id": "e6b80a25e9385597",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Setting up the Project.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Setting up the Project"
+              "title": "REC Research Project"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "3b21866b59c922ba",
@@ -226,12 +211,27 @@
       "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "active": "e6b80a25e9385597",
+  "active": "e11d0105221b6667",
   "lastOpenFiles": [
+    "Datasets/World Bank WITS.md",
+    "REC Research Project/REC Research Project.md",
+    "COMTRADE",
+    "REC Research Project/Jeffrey A. Frankel.md",
+    "().md",
+    "Datasets/IMF International Trade in Goods (IMTS).md",
+    "Datasets/Bilateral Trade in Services Research Dataset (BiTS).md",
+    "Bilateral Trade in Services (BiTS, WTO",
+    "Datasets/IMF Portfolio Investment Positions by Counterpart Economy (CPIS).md",
+    "Datasets/Balance of Payments and International Investment Position Statistics.md",
+    "Datasets/IMF Direct Investment Positions by Counterpart Economy (CDIS).md",
+    "REC Research Project/Andrew Rose.md",
+    "REC Research Project",
+    "Datasets",
+    "REC Research Project/Robert C. Feenstra.md",
+    "create a link.md",
     "Welcome.md",
-    "Setting up the Project.md",
+    "REC Research Project/Shang-Jin Wei.md",
     "Untitled 1.md",
-    "RECs on EU Trade Impact",
-    "create a link.md"
+    "RECs on EU Trade Impact"
   ]
 }

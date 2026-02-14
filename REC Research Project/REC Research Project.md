@@ -1,4 +1,6 @@
-Regional trade agreements have long been studied using gravity models to estimate their average trade effects. Seminal contributions by [Jeffrey A. Frankel](https://www.hks.harvard.edu/faculty/jeffrey-frankel) and [Shang-Jin Wei](https://business.columbia.edu/faculty/people/shang-jin-wei) framed regional integration as either a “building block” or “stumbling block” for global trade, while subsequent large-scale panel estimations by [Andrew Rose](https://www.andrewkrose.net/) quantified the trade-creating effects of regional trade agreements. More recent structural gravity approaches following [Robert C. Feenstra](http://www.robertcfeenstra.com/) emphasize consistent estimation under multilateral resistance.
+## **Intro**
+
+Regional trade agreements have long been studied using gravity models to estimate their average trade effects. Seminal contributions by [[Jeffrey A. Frankel]] and [[Shang-Jin Wei]] framed regional integration as either a “building block” or “stumbling block” for global trade, while subsequent large-scale panel estimations by [[Andrew Rose]] quantified the trade-creating effects of regional trade agreements. More recent structural gravity approaches following [[Robert C. Feenstra]] emphasize consistent estimation under multilateral resistance.
 
 Yet this literature largely treats regional agreements as binary institutional treatments. In particular, little attention has been paid to whether the trade effects of North–South agreements depend on the internal institutional depth of Southern partners.
 
@@ -17,7 +19,12 @@ While the data sources and coding methodology are defined, the final **time fram
 
 ### **1. Trade Data**
 
-**a) IMF International Trade in Goods (IMTS)**
+[IMF Datasets](https://data.imf.org/en/Datasets#t=coveo117bcfc4&sort=%40idata_publication_date%20descending)
+[Global Trade Data. WTO](https://globaltradedata.wto.org/resource-library)
+[OECD](https://data-explorer.oecd.org/?fs[0]=Topic%2C1%7CTrade%23TRD%23%7CTrade%20in%20goods%20and%20services%23TRD_GDS%23&pg=0&bp=true&snb=30)
+
+
+**a) [[IMF International Trade in Goods (IMTS)]]**
 
 - **Coverage:** Bilateral trade in goods by partner country, nominal values.
     
@@ -29,6 +36,9 @@ While the data sources and coding methodology are defined, the final **time fram
     
 
 **b) CEPII BACI / GeoDist / Gravity Datasets**
+[DBNomics/CEPII](https://db.nomics.world/CEPII)
+[CEPII Databases](https://www.cepii.fr/CEPII/en/bdd_modele/bdd_modele.asp)
+
 
 - **Coverage:** Harmonized bilateral trade flows (HS6, SITC) from COMTRADE; includes distance, contiguity, colonial ties, language.
     
@@ -37,7 +47,7 @@ While the data sources and coding methodology are defined, the final **time fram
 - **Strength:** Standardized, internationally cited, facilitates multilateral resistance term computation.
     
 
-**c) Bilateral Trade in Services (BiTS, WTO/CEPII)**
+**c) [[Bilateral Trade in Services Research Dataset (BiTS)]]**
 
 - **Coverage:** EU–ACP bilateral services trade.
     
@@ -46,7 +56,7 @@ While the data sources and coding methodology are defined, the final **time fram
 - **Considerations:** Sparse for small Pacific/Caribbean ACP states; may aggregate by service categories.
     
 
-**d) COMTRADE / World Bank WITS**
+**d) [[World Bank WITS]]**
 
 - **Coverage:** Detailed trade flows and tariff schedules.
     
@@ -59,7 +69,7 @@ While the data sources and coding methodology are defined, the final **time fram
 
 ### **2. Investment & FDI Data**
 
-**a) IMF Direct Investment Positions by Counterpart Economy (CDIS)**
+**a) [[IMF Direct Investment Positions by Counterpart Economy (CDIS)]]**
 
 - **Coverage:** Bilateral FDI stocks (positions) by reporting and partner country.
     
@@ -68,14 +78,14 @@ While the data sources and coding methodology are defined, the final **time fram
 - **Considerations:** Annual stocks rather than flows; may combine with flow data if needed.
     
 
-**b) IMF Portfolio Investment Positions (CPIS)**
+**b) [[IMF Portfolio Investment Positions by Counterpart Economy (CPIS)]]**
 
 - **Coverage:** EU holdings in ACP sovereign debt/equity.
     
 - **Use:** Robustness check for financial integration; complements FDI analysis.
     
 
-**c) IMF Balance of Payments & IIP (BOP/IIP)**
+**c) [[Balance of Payments and International Investment Position Statistics (BOP/IIP)]]**
 
 - **Coverage:** Aggregate external accounts.
     
@@ -85,6 +95,9 @@ While the data sources and coding methodology are defined, the final **time fram
 ---
 
 ### **3. Country- & REC-Level Covariates**
+
+[Regional Trade Agreements Database](https://rtais.wto.org/UI/PublicAllRTAList.aspx)
+
 
 **a) CEPII GeoDist / Gravity dataset**
 
@@ -148,3 +161,7 @@ While the data sources and coding methodology are defined, the final **time fram
     - Create interaction variable: EPA×RECDepthEPA \times RECDepthEPA×RECDepth.
         
     - Construct panel for PPML estimation (trade levels) or log-differences (trade growth).
+
+## **Other Literature**
+
+[Saving, investment, and capital mobility among OECD countries](https://link.springer.com/article/10.1007/BF01886897)
