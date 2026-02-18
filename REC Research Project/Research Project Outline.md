@@ -1,6 +1,6 @@
 ## **Intro**
 
-Regional trade agreements have long been studied using [[Gravity Models]] to estimate their average trade effects. Seminal contributions by [[Jeffrey A. Frankel]] and [[Shang-Jin Wei]] framed regional integration as either a “building block” or “stumbling block” for global trade, while subsequent large-scale panel estimations by [[Andrew Rose]] quantified the trade-creating effects of regional trade agreements. More recent structural gravity approaches following [[Robert C. Feenstra]] emphasize consistent estimation under multilateral resistance.
+Regional trade agreements have long been studied using [[Gravity, globalization and time-varying heterogeneity]] to estimate their average trade effects. Seminal contributions by [[Jeffrey A. Frankel]] and [[Shang-Jin Wei]] framed regional integration as either a “building block” or “stumbling block” for global trade, while subsequent large-scale panel estimations by [[Andrew Rose]] quantified the trade-creating effects of regional trade agreements. More recent structural gravity approaches following [[Robert C. Feenstra]] emphasize consistent estimation under multilateral resistance.
 
 Yet this literature largely treats regional agreements as binary institutional treatments. In particular, little attention has been paid to whether the trade effects of North–South agreements depend on the internal institutional depth of Southern partners.
 
@@ -169,4 +169,7 @@ While the data sources and coding methodology are defined, the final **time fram
 [Saving, investment, and capital mobility among OECD countries](https://link.springer.com/article/10.1007/BF01886897)
 
 **[[African Research]]**
+
+[[Gravity, globalization and time-varying heterogeneity]]
+
 
