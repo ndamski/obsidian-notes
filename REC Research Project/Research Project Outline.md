@@ -1,6 +1,6 @@
 ## **Intro**
 
-Regional trade agreements have long been studied using gravity models to estimate their average trade effects. Seminal contributions by [[Jeffrey A. Frankel]] and [[Shang-Jin Wei]] framed regional integration as either a “building block” or “stumbling block” for global trade, while subsequent large-scale panel estimations by [[Andrew Rose]] quantified the trade-creating effects of regional trade agreements. More recent structural gravity approaches following [[Robert C. Feenstra]] emphasize consistent estimation under multilateral resistance.
+Regional trade agreements have long been studied using [[Gravity Models]] to estimate their average trade effects. Seminal contributions by [[Jeffrey A. Frankel]] and [[Shang-Jin Wei]] framed regional integration as either a “building block” or “stumbling block” for global trade, while subsequent large-scale panel estimations by [[Andrew Rose]] quantified the trade-creating effects of regional trade agreements. More recent structural gravity approaches following [[Robert C. Feenstra]] emphasize consistent estimation under multilateral resistance.
 
 Yet this literature largely treats regional agreements as binary institutional treatments. In particular, little attention has been paid to whether the trade effects of North–South agreements depend on the internal institutional depth of Southern partners.
 
@@ -22,6 +22,8 @@ While the data sources and coding methodology are defined, the final **time fram
 [IMF Datasets](https://data.imf.org/en/Datasets#t=coveo117bcfc4&sort=%40idata_publication_date%20descending)
 [Global Trade Data. WTO](https://globaltradedata.wto.org/resource-library)
 [OECD](https://data-explorer.oecd.org/?fs[0]=Topic%2C1%7CTrade%23TRD%23%7CTrade%20in%20goods%20and%20services%23TRD_GDS%23&pg=0&bp=true&snb=30)
+[[UN Trade and Development (UNCTAD)]]
+[[Global Trade Analysis Project]]
 
 
 **a) [[IMF International Trade in Goods (IMTS)]]**
@@ -165,3 +167,6 @@ While the data sources and coding methodology are defined, the final **time fram
 ## **Other Literature**
 
 [Saving, investment, and capital mobility among OECD countries](https://link.springer.com/article/10.1007/BF01886897)
+
+**[[African Research]]**
+
