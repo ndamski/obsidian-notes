@@ -6,15 +6,39 @@ Yet this literature largely treats regional agreements as binary institutional t
 
 This paper examines whether the trade effects of European Union preferential agreements with African, Caribbean, and Pacific (ACP) countries vary systematically with the depth of regional integration within ACP regional economic communities (RECs). Specifically, I test whether deeper South–South integration amplifies the trade response to EU Economic Partnership Agreements (EPAs).
 
-I construct a continuous index of REC institutional depth and interact it with EPA implementation in a structural gravity framework estimated using PPML with exporter-year and importer-year fixed effects. The results speak directly to the building-block hypothesis by asking not whether regionalism increases trade on average, but whether internal integration conditions the effectiveness of external liberalization.
-
 For this study, I will draw on multiple international datasets to construct a panel of EU–ACP country-year observations capturing trade flows, foreign direct investment (FDI), and macroeconomic covariates. Bilateral trade in goods will primarily come from the IMF’s International Trade in Goods (IMTS) database, which reports partner-country trade values, and will be supplemented with CEPII’s BACI dataset for harmonized trade flows and bilateral gravity variables such as distance, contiguity, common language, and colonial ties. Bilateral trade in services will be explored using the BiTS dataset, while EU–ACP FDI stocks and positions will be drawn from the IMF’s Direct Investment Positions by Counterpart Economy (CDIS) and Portfolio Investment Positions (CPIS) datasets. Aggregate macroeconomic indicators, including GDP and population, will be obtained from the World Bank’s World Development Indicators. Additional trade and tariff information may be drawn from COMTRADE and WITS to validate the treatment effects of preferential access under the European Union Economic Partnership Agreements (EPAs).
-
-The construction of the main explanatory variables involves coding both the timing of EPA implementation and the depth of regional economic integration within ACP countries. EPA timing will be captured as a country- or regional-level dummy that switches on when a specific EPA enters into force, allowing for staggered treatment analysis. Regional Economic Community (REC) depth will be captured using a continuous institutional index, ranging from minimal integration (free trade agreements or partial scope arrangements) to deep integration (fully operational customs unions or common markets). Coding rules will address overlapping REC memberships by assigning the country-year observation the maximum integration depth, or using alternative weighting schemes where appropriate. Standard gravity covariates, including bilateral distance, contiguity, common language, and colonial ties, will be included to control for structural determinants of trade.
 
 While the data sources and coding methodology are defined, the final **time frame, list of ACP countries, and REC coverage** have not yet been finalized. These decisions will depend on the availability of consistent trade, FDI, and macroeconomic data across the relevant periods, as well as the timing of EPA implementation and the operational status of the various RECs. Once finalized, the panel will be structured to facilitate estimation using a PPML gravity framework, with exporter-year and importer-year fixed effects to control for country-specific and multilateral resistance factors, and will allow for the key interaction between EPA implementation and REC depth to assess whether the internal integration of ACP partners conditions the trade and investment effects of EU preferential agreements.
 
+### Integration data
 
+The first is **intra-REC trade share** — the UNU-CRIS formula you already have: (X_ii + M_ii) / (X_i. + M_i.). For each ACP country-year, this gives you the share of its total trade that flows to other REC members. It's continuous, it varies by country _and_ year, it requires no researcher judgment, and it's directly observable from BACI data. This is essentially what Standaert is implicitly measuring when he talks about de facto integration — countries that are actually integrated trade a lot with each other.
+
+The second is **intra-REC trade intensity** — the second UNU-CRIS formula, which corrects the trade share for the REC's size relative to world trade. This is more sophisticated because a large REC will mechanically show high intra-regional shares even without deep integration.
+
+Your research question is whether ACP countries that are more open to regional integration get more out of their EU EPA. If you use the trade share measure, you're testing exactly that — countries that actually trade with their neighbours, not just countries that signed a treaty saying they would. It also sidesteps the entire overlapping membership problem entirely, since the trade share is computed at the country level regardless of which REC it belongs to.
+
+The one genuine concern is **endogeneity** — intra-REC trade share and EU-ACP trade flows might both be driven by a third factor (say, good institutions or low trade costs generally), so the interaction term EPA × IntraRECShare might be picking up something else. But this is manageable with your fixed effects structure, and it's a cleaner endogeneity problem to discuss than the measurement validity problem with the coding approach.
+
+#### R application
+
+Full R pipeline for constructing intra-REC trade share and gravity panel:
+
+Each BACI file is a CSV for one year with columns for exporter (`i`), importer (`j`), product code (`k`), trade value (`v`), and quantity (`q`). [European Parliament](https://www.europarl.europa.eu/thinktank/en/document/EPRS_BRI\(2023\)757563) And importantly, BACI doesn't record zero trade flows [EU Trade](https://policy.trade.ec.europa.eu/development-and-sustainability/economic-partnerships_en) — which matters for how we handle zeros in the panel. Let me now write the full R pipeline.
+
+**`01_build_panel.R` — Data pipeline**
+
+The key section is Step 2, which constructs the intra-REC trade share directly from BACI using the UNU-CRIS formula from your own notes: `(intra-REC exports + imports) / (total exports + imports)`. It also computes IT Intensity, which adjusts for the REC's share of world trade. Everything gets merged into a single panel dataset at the EU-member × ACP-country × year level, with zeros explicitly included for country pairs that didn't trade in a given year — those zeros matter for PPML.
+
+**`02_estimate_gravity.R` — Estimation**
+
+Runs five models in sequence: baseline PPML without the openness variable, PPML with IT share alone, the main interaction specification (EPA × IT Share — this is your key coefficient), an IT Intensity robustness check, and an OLS comparison on log trade. At the bottom it computes the marginal effect of the EPA at different percentiles of IT share, which is a clean way to present your main result — something like "for countries at the median intra-REC trade share, having an EPA increases EU trade by X%, but for countries at the 75th percentile of openness the effect is Y%."
+
+**Before you run it, you need three things downloaded:**
+
+1. BACI HS07 from cepii.fr — pick HS2007 revision, download the full zip, point `BACI_DIR` at the folder
+2. CEPII Gravity dataset (flat file version) from the same site — point `GRAVITY_FILE` at it
+3. WDI pulls automatically via the `WDI` package — just run `install.packages("WDI")` if you don't have it
 ## **Data Sources and Methodological Approach for EU–ACP Trade & FDI Study**
 
 ### **1. Trade Data**

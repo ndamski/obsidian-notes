@@ -1,5 +1,6 @@
+https://scholar.google.com/citations?user=JsnqRNoAAAAJ&hl=en
 
-[Multilateral trade agreements in Africa](https://link.springer.com/article/10.1007/s10101-015-0167-8)
+## [Multilateral trade agreements in Africa](https://link.springer.com/article/10.1007/s10101-015-0167-8)
 
 The argument of long-term economies of scale (or dynamic effects) also has some flaws. First of all, even if we were to unite all sub-Saharan markets, the combined GDP would still be small, especially given the size of the African continent. For instance, in 2009 the combined GDP of all sub-Saharan countries roughly equaled that of the state of New York. Secondly, to fully integrate a slew of problems would have to be conquered: different languages, currencies, rules and regulations, practically non-existent transnational transportation facilities, etc. Circumventing or breaking down these barriers to trade is extremely expensive in time, money and human capital (Foroutan and Pritchett [1993](https://link.springer.com/article/10.1007/s10101-015-0167-8#ref-CR11 "Foroutan F, Pritchett L (1993) Intra-sub-saharan african trade: is it too little? J Afr Econ 2(1):74–105")). In short, the cost of attaining the level of integration that is needed to produce economies of scale outweighs its benefits in the short and medium-long term.
 
@@ -10,7 +11,7 @@ This dataset was used to create two dependent variables to be used in the unilat
 
 RIAbi^b_a signals whether countries _a_ and _b_ are members of any of the listed agreements in the year 2010. Because the index is symmetrical, each country-couple is covered once giving us 53 x 53/2 = 1378 observations. Because of the plethora of African trade agreements, half of the countries-couples covered are members of the same agreement.
 
-**Results (detailed):**
+### **Results (detailed):**
 
 - **Unilateral regressions (RIAuni_x,t):**
     
@@ -91,7 +92,7 @@ RIAbi^b_a signals whether countries _a_ and _b_ are members of any of the li
 - **H3:** Geography and economic size **moderate** the effect of openness on trade flows.
 
 
-## 3️⃣ Dataset Construction
+### Dataset Construction
 
 - **Unilateral indicator (Openness_x,t):**
     
@@ -126,7 +127,7 @@ RIAbi^b_a signals whether countries _a_ and _b_ are members of any of the li
 
 ---
 
-## 4️⃣ Regression Design
+### Regression Design
 
 - **Unilateral regression (country-level openness):**
     
@@ -153,7 +154,7 @@ RIAbi^b_a signals whether countries _a_ and _b_ are members of any of the li
 
 ---
 
-## 5️⃣ Key Lessons from African RIA Study
+### Key Lessons from African RIA Study
 
 - **Corruption increases likelihood of participation**, even when welfare gains are limited.
     
@@ -165,9 +166,9 @@ RIAbi^b_a signals whether countries _a_ and _b_ are members of any of the li
     
 - **Implication for EU-ACP:** Expect **heterogeneous effects** across ACP countries; linear assumptions should be tested.
     
-## 6️⃣ Visualization / Table Ideas
+### Visualization / Table Ideas
 
-### **A) Scatterplot: Trade Flows vs Openness**
+#### Scatterplot: Trade Flows vs Openness
 
 |X-axis|Y-axis|Points|Color / Shape|
 |---|---|---|---|
@@ -184,7 +185,7 @@ RIAbi^b_a signals whether countries _a_ and _b_ are members of any of the li
 
 ---
 
-### **B) Interaction Scatterplot (Optional)**
+#### Interaction Scatterplot (Optional)
 
 |X-axis|Y-axis|Color|Shape|
 |---|---|---|---|
@@ -199,7 +200,7 @@ RIAbi^b_a signals whether countries _a_ and _b_ are members of any of the li
 
 ---
 
-### **C) Table: Summary Statistics**
+#### Table: Summary Statistics
 
 |Variable|Mean|Std. Dev|Min|Max|Notes|
 |---|---|---|---|---|---|
@@ -219,11 +220,11 @@ RIAbi^b_a signals whether countries _a_ and _b_ are members of any of the li
 
 ---
 
-### **D) Suggested Figure Labels for Obsidian**
+### Suggested Figure Labels for Obsidian
 
 `# Figure 1: EU-ACP Trade Flows vs ACP Openness # X-axis: Openness index (0–1) # Y-axis: Trade flow volume (log $) # Trend line: Linear regression or LOESS  # Figure 2 (optional): Interaction by GDP size # Points colored by GDP (high/low), shape by corruption (high/low)`
 
-## Regression Design
+### Regression Design
 
 - **Unilateral regression (country-level openness):**
 Openness_x,t = α + β1*GDP_x,t + β2*Corruption_x,t + β3*Distance_to_EU + ε_x,t
@@ -237,3 +238,15 @@ Y-axis: Trade flow volume (log $)
 Trend line: Linear regression or LOESS
 Figure 2 (optional): Interaction by GDP size
 Points colored by GDP (high/low), shape by corruption (high/low)
+
+
+
+## [Gravity, globalization and time-varying heterogeneity](https://www.sciencedirect.com/science/article/pii/S0014292124000084#section-cited-by)
+
+## [Regional trade liberalisation](https://www.elgaronline.com/edcollchap-oa/book/9781800373747/book-part-9781800373747-10.xml)
+
+## [Annual Bilateral Migration Data](https://data.mendeley.com/datasets/cpt3nh6jct/1)
+
+## [Measuring Actual Economic Integration: A Bayesian State-Space Approach](https://link.springer.com/chapter/10.1007/978-3-319-50860-3_16)
+
+scott baier
