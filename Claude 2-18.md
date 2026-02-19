@@ -210,7 +210,8 @@ The four references to anchor the paper in the literature are Standaert (2015) f
 
 [Docx](C:\Users\ndams\Documents\Erol\output\Session_Notes_19Feb2026.docx)
 
+What
 
-Continue filling in the day report.
+Continue filling in the day report
 
 How i make a new chart like i have for Africa/Caribbean/Pacific but for the RECs rather?
