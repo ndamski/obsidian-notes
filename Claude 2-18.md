@@ -213,4 +213,4 @@ The four references to anchor the paper in the literature are Standaert (2015) f
 
 Continue filling in the day report.
 
-Can i make a new chart like i have for Africa/Caribbean/Pacific but for the RECs rather?
+How i make a new chart like i have for Africa/Caribbean/Pacific but for the RECs rather?
