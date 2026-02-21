@@ -1,7 +1,7 @@
 
 # 1. What We Did Today
 
-## 1.1  Rethought the REC Depth Variable
+## 1.1  REC Depth Variable
 
 Originally planned to code ACP countries on an ordinal 0–4 integration scale following the Baier et al. (2014) typology. Decided against this as the primary variable because it relies on de jure treaty text, which Standaert (2015) shows diverges badly from de facto integration in Africa. Built a full REC Depth coding spreadsheet anyway — now saved as REC_Depth_Index_Coding.xlsx — to use as a robustness check or appendix rather than the main variable. Following the UNU-CRIS (2009) formulas already in the Comparative Regionalization notes, settled on IT Share — `(intra-REC exports + imports) / total trade` — as the primary measure of regional openness. IT Share is data-driven, continuous, varies by country and year, and requires no researcher judgment about integration depth. IT Intensity was also computed as a secondary measure.
 
