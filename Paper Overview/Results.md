@@ -5,6 +5,9 @@
 
 Higher intra-regional trade integration among ACP blocs is associated with significantly less bilateral trade with EU member states — a stumbling block effect. At the median level of regional integration, EU-ACP trade is approximately 11% lower; at the 90th percentile (characteristic of SADC), 36% lower. This holds across PPML and OLS, across both trade directions, and across five of seven regional blocs.
 
+***
+
+![[main_results.tex]]
 ---
 
 **Data and sample — things to flag**

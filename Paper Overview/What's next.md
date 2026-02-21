@@ -24,3 +24,7 @@ The working answer is Yes?
 **What to do next**
 
 The scripts themselves do not need further structural work. The next step is the writeup. Based on everything in the outputs, the paper has a clear three-part structure: the full-sample stumbling block result (main tables), the trade direction asymmetry (direction table, your most novel finding), and the REC heterogeneity with CEMAC as the building block exception (subsample table and coefficient plot). Everything you need is already estimated and saved. Start with the results section and work backwards to the data and methods — it is easier to write the methods once you know exactly what you are defending.
+
+
+
+Do i have to change the countries (i think Mauritania is still in ECOWAS, and should i identify any outliers). Do i need to adjust the years, and what if there is data for missing gaps from outside of CEPii for either BACI or Gravity info. i need to rethink the variables used for both.
