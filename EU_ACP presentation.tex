@@ -1,0 +1,418 @@
+\documentclass[aspectratio=169,12pt]{beamer}
+
+% === PACKAGES ===
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{booktabs}           % for professional tables
+\usepackage{colortbl}           % for colored tables
+\usepackage{xcolor}
+\usepackage{subfig}
+\usepackage{geometry}
+\usepackage{makecell}
+
+% === COLOR THEME ===
+\definecolor{uva}{RGB}{0,51,141}     % University blue
+\definecolor{uvaLight}{RGB}{100,149,237}
+\definecolor{darkgray}{RGB}{64,64,64}
+
+\setbeamercolor{title}{fg=uva}
+\setbeamercolor{subtitle}{fg=darkgray}
+\setbeamercolor{structure}{fg=uva}
+\setbeamercolor{alerted text}{fg=red}
+\setbeamercolor{item}{fg=uva}
+
+% === BEAMER THEME SETTINGS ===
+\usetheme{Madrid}
+\usecolortheme{whale}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+\setbeamertemplate{itemize items}[circle]
+\setbeamertemplate{enumerate items}[circle]
+
+% === TITLE SLIDE INFORMATION ===
+\title[EU-ACP Trade Integration]{Intra-Regional Trade Integration and EU-ACP Bilateral Trade}
+\subtitle{Evidence from Gravity Model Estimations}
+\author[Noah Damski]{Noah Damski}
+\institute[University of Florida]{Department of Economics \\ University of Florida}
+\date{February 22, 2026}
+
+% === BEGIN DOCUMENT ===
+\begin{document}
+
+% ============================================
+% TITLE SLIDE
+% ============================================
+\begin{frame}
+    \titlepage
+\end{frame}
+
+% ============================================
+% OUTLINE SLIDE
+% ============================================
+\begin{frame}{Presentation Outline}
+    \begin{enumerate}
+        \item Introduction \& Motivation
+        \item Institutional Background
+        \item Data \& Descriptive Statistics
+        \item Empirical Strategy
+        \item Main Results
+        \item Mechanisms \& Heterogeneity
+        \item Robustness Checks
+        \item Conclusion
+    \end{enumerate}
+\end{frame}
+
+% ============================================
+% INTRODUCTION
+% ============================================
+\section{INTRODUCTION}
+\begin{frame}{Introduction}
+    \textbf{Research Question}
+    \begin{itemize}
+        \item How does intra-regional trade integration among ACP countries affect their bilateral trade with the
+EU?
+    \end{itemize}
+
+    \vspace{0.3cm}
+
+    \textbf{Key Findings}
+    \begin{itemize}
+        \item Higher intra-regional trade shares are associated with significantly lower EU-ACP bilateral trade
+        \item ``Stumbling block'' effect: At mean IT share (10$\%$), bilateral trade is $\approx$16$\%$ lower
+        \item At 90th percentile (26$\%$), the effect reaches 36$\%$ lower
+        \item EPAs partially offset this negative relationship
+    \end{itemize}
+
+    \vspace{0.3cm}
+
+    \textbf{Contribution}
+    \begin{itemize}
+        \item First paper to empirically test the stumbling block hypothesis in EU-ACP context
+        \item Policy relevance for trade agreement design in developing countries
+    \end{itemize}
+\end{frame}
+
+% ============================================
+% INSTITUTIONAL BACKGROUND
+% ============================================
+\section{INSTITUTIONAL BACKGROUND}
+\begin{frame}{Institutional Background}
+    \textbf{Cotonou Agreement \& EPA Negotiations}
+    \begin{itemize}
+        \item Signed in 2000, replaced Lomé Convention
+        \item Key change: From non-reciprocal to reciprocal trade agreements
+        \item Economic Partnership Agreements (EPAs) as new framework
+    \end{itemize}
+
+    \vspace{0.3cm}
+
+    \textbf{ACP Regional Groupings}
+    \begin{itemize}
+        \item ECOWAS (West Africa), SADC (Southern Africa)
+        \item EAC (East Africa), CARICOM (Caribbean)
+        \item CEMAC, COMESA, Pacific Islands Forum
+    \end{itemize}
+
+    \vspace{0.3cm}
+
+    \textbf{Timeline}
+    \begin{itemize}
+        \item 2000: Cotonou Agreement signed
+        \item 2002-2007: EPA negotiations begin
+        \item 2008 onwards: EPA implementation phases
+    \end{itemize}
+\end{frame}
+
+% ============================================
+% DATA & DESCRIPTIVE STATISTICS
+% ============================================
+\section{DATA AND DESCRIPTIVE STATISTICS}
+\begin{frame}{Data Sources}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \textbf{Data Sources}
+            \begin{itemize}
+                \item \textbf{BACI}: CEPII bilateral trade data
+                \item \textbf{CEPII}: Gravity variables (distance, contiguity, etc.)
+                \item \textbf{WDI}: World Development Indicators
+            \end{itemize}
+        \end{column}
+
+        \begin{column}{0.5\textwidth}
+            \textbf{Sample Construction}
+            \begin{itemize}
+                \item 78 ACP countries
+                \item 7 Regional Economic Communities
+                \item Time period: 1995–2020
+            \end{itemize}
+        \end{column}
+    \end{columns}
+
+    \vspace{0.3cm}
+
+    \textbf{Key Variables}
+    \begin{itemize}
+        \item \textit{Dependent Variable}: Bilateral trade (EU-ACP), estimated via PPML
+        \item \textit{Independent Variable}: Intra-regional trade share
+        \item \textit{Controls}: Distance, common language, colonial ties, GDP
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Descriptive Evidence}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{block}{Figure 1a: Regional Trends}
+                \centering
+                \textit{Place Figure 1a Here}\\
+                \texttt{it\_share\_time\_series.png}
+            \end{block}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{block}{Figure 1b: IT Share vs Trade}
+                \centering
+                \textit{Place Figure 1b Here}\\
+                \texttt{stumbling\_block\_scatter.png}
+            \end{block}
+        \end{column}
+    \end{columns}
+
+    \vspace{0.3cm}
+    \centering
+    \small\textbf{Regional Integration and EU-ACP Trade: Descriptive Evidence}
+\end{frame}
+
+% ============================================
+% EMPIRICAL STRATEGY
+% ============================================
+\section{EMPIRICAL STRATEGY}
+\begin{frame}{Gravity Model Specification}
+    \textbf{Model Equation}
+    \begin{align}
+        \ln(TRADE_{ijt}) &= \beta_0 + \beta_1 IT\_SHARE_{jt} + \beta_2 EPA_{jt} \\
+        &\quad + \beta_3 (IT\_SHARE_{jt} \times EPA_{jt}) \\
+        &\quad + \gamma X_{ijt} + \mu_{ij} + \theta_t + \epsilon_{ijt}
+    \end{align}
+
+    \vspace{0.2cm}
+
+    \textbf{Key Variables}
+    \begin{itemize}
+        \item $IT\_SHARE_{jt}$: Intra-regional trade share for country $j$ at time $t$
+        \item $EPA_{jt}$: Time-varying EPA treatment indicator
+        \item $X_{ijt}$: Standard gravity controls
+        \item $\mu_{ij}$: Country-pair fixed effects
+        \item $\theta_t$: Time fixed effects
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Identification Strategy}
+    \textbf{Fixed Effects Structure}
+    \begin{itemize}
+        \item \textbf{Exporter $\times$ Year FE}: Control for time-varying exporter characteristics
+        \item \textbf{ACP Importer FE}: Control for time-invariant importer characteristics
+        \item \textbf{Year FE}: Control for common time shocks
+    \end{itemize}
+
+    \vspace{0.3cm}
+
+    \textbf{Identification}
+    \begin{itemize}
+        \item Within-country variation in IT share over time
+        \item Standard gravity controls: distance, language, colonial ties
+    \end{itemize}
+\end{frame}
+
+% ============================================
+% MAIN RESULTS
+% ============================================
+\section{MAIN RESULTS}
+\begin{frame}{Main Results: Gravity Model Estimates}
+    \begin{table}
+        \centering
+        \tiny
+        \begin{tabular}{lccccc}
+            \toprule
+            & \makecell{Baseline\\PPML} & \makecell{IT Share\\PPML} & \makecell{IT $\times$ EPA\\PPML} &
+\makecell{IT\\Intensity} & \makecell{IT Share\\OLS} \\
+            \midrule
+            ln(Distance) & -1.717$^{***}$ & -1.769$^{***}$ & -1.769$^{***}$ & -1.764$^{***}$ & -1.195$^{***}$ \\
+            & (0.607) & (0.639) & (0.639) & (0.639) & (0.240) \\
+            Common Language & 1.113$^{***}$ & 1.119$^{***}$ & 1.119$^{***}$ & 1.120$^{***}$ & 0.687$^{***}$ \\
+            & (0.218) & (0.222) & (0.222) & (0.222) & (0.125) \\
+            Colonial Tie & 0.205 & 0.186 & 0.186 & 0.184 & 1.251$^{***}$ \\
+            & (0.228) & (0.232) & (0.232) & (0.232) & (0.202) \\
+            EPA (=1 in force) & -0.031 & -0.058 & -0.158$^{**}$ & -0.055 & -0.136$^{***}$ \\
+            & (0.047) & (0.044) & (0.066) & (0.044) & (0.044) \\
+            Intra-REC Trade Share & & -1.755$^{***}$ & -1.758$^{***}$ & & -1.526$^{***}$ \\
+            & & (0.384) & (0.378) & & (0.245) \\
+            EPA $\times$ IT Share & & & 0.901$^{**}$ & & \\
+            & & & (0.422) & & \\
+            Intra-REC Trade Intensity & & & & -0.006$^{***}$ & \\
+            & & & & (0.002) & \\
+            \midrule
+            Obs. & 44,054 & 43,238 & 43,238 & 43,238 & 40,334 \\
+            R$^2$ & & & & & 0.755 \\
+            \bottomrule
+        \end{tabular}
+    \end{table}
+    \vspace{-0.3cm}
+    \tiny\textit{Notes: } Clustered (pair\_id) SE in parentheses. $^{***}p<0.01$, $^{**}p<0.05$. Columns (1)-(4):
+PPML. Column (5): OLS.
+\end{frame}
+
+\begin{frame}{Interpretation of Magnitudes}
+    \textbf{Economic Interpretation}
+    \begin{itemize}
+        \item At mean intra-regional trade share (10$\%$): $\approx$16$\%$ lower EU-ACP bilateral trade
+        \item At 90th percentile (26$\%$): $\approx$36$\%$ lower bilateral trade
+    \end{itemize}
+
+    \vspace{0.3cm}
+
+    \textbf{EPA Offset Effect}
+    \begin{itemize}
+        \item EPAs partially mitigate the negative relationship
+        \item Interaction term: $+0.90^{**}$ (p$<0.05$)
+    \end{itemize}
+
+    \vspace{0.3cm}
+
+    \textbf{Trade Direction}
+    \begin{itemize}
+        \item Effect stronger for EU exports to ACP ($-1.86$)
+        \item vs. ACP exports to EU ($-1.60$)
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Heterogeneity: REC Effects}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{block}{Figure 2a: REC Heterogeneity}
+                \centering
+                \textit{Place Figure Here}\\
+                \texttt{rec\_coef\_plot.png}
+            \end{block}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{block}{Figure 2b: Marginal Effects}
+                \centering
+                \textit{Place Figure Here}\\
+                \texttt{marginal\_effects\_it\_share.png}
+            \end{block}
+        \end{column}
+    \end{columns}
+
+    \vspace{0.2cm}
+    \centering
+    \small\textbf{Effect of Intra-REC Trade Share on EU-ACP Bilateral Trade}
+\end{frame}
+
+% ============================================
+% MECHANISMS & HETEROGENEITY
+% ============================================
+\section{MECHANISMS AND HETEROGENEITY}
+\begin{frame}{Heterogeneity Analysis}
+    \textbf{REC-by-REC Subsamples}
+    \begin{itemize}
+        \item ECOWAS, SADC, EAC, CARICOM, CEMAC, COMESA, Pacific
+        \item All show negative effects, but substantial variation
+        \item PIF (Pacific Islands): largest negative coefficient ($-29.6$)
+        \item Central Africa: smallest effect ($-0.81$, not significant)
+    \end{itemize}
+
+    \vspace{0.3cm}
+
+    \textbf{Regional Subsamples}
+    \begin{itemize}
+        \item Africa: largest sample, significant effects
+        \item Caribbean: moderate effects
+        \item Pacific: limited data, imprecise estimates
+    \end{itemize}
+\end{frame}
+
+% ============================================
+% ROBUSTNESS CHECKS
+% ============================================
+\section{ROBUSTNESS CHECKS}
+\begin{frame}{Robustness Checks}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \textbf{Sample Sensitivity}
+            \begin{itemize}
+                \item Excluding outlier countries
+                \item Different time windows
+                \item Alternative sample definitions
+            \end{itemize}
+        \end{column}
+
+        \begin{column}{0.5\textwidth}
+            \textbf{Specification Alternatives}
+            \begin{itemize}
+                \item Alternative fixed effects
+                \item Different control variables
+                \item Nonlinear specifications
+            \end{itemize}
+        \end{column}
+    \end{columns}
+
+    \vspace{0.3cm}
+
+    \textbf{OLS vs. PPML}
+    \begin{itemize}
+        \item Poisson Pseudo-Maximum Likelihood addresses zero trade flows
+        \item Results remain robust across specifications
+    \end{itemize}
+\end{frame}
+
+% ============================================
+% CONCLUSION
+% ============================================
+\section{CONCLUSION}
+\begin{frame}{Conclusion}
+    \textbf{Summary of Findings}
+    \begin{enumerate}
+        \item Strong evidence of ``stumbling block'' effect
+        \item Higher intra-regional trade shares reduce EU-ACP bilateral trade
+        \item Magnitude: 16$\%$ to 36$\%$ reduction depending on IT share level
+        \item EPAs partially offset negative effects
+    \end{enumerate}
+
+    \vspace{0.3cm}
+
+    \textbf{Policy Implications}
+    \begin{itemize}
+        \item Trade agreements must account for regional integration effects
+        \item EPAs can mitigate trade-diverting effects of RECs
+    \end{itemize}
+
+    \vspace{0.3cm}
+
+    \textbf{Limitations}
+    \begin{itemize}
+        \item Data constraints for smaller ACP countries
+        \item Could extend to other developing regions
+    \end{itemize}
+\end{frame}
+
+% ============================================
+% THANK YOU SLIDE
+% ============================================
+\begin{frame}
+    \begin{center}
+        \Huge\textbf{Thank You!}
+
+        \vspace{0.8cm}
+
+        \Large Questions?
+
+        \vspace{0.8cm}
+
+        \normalsize
+        \textit{Noah Damski} \\
+        \texttt{noah.damski@ufl.edu}
+    \end{center}
+\end{frame}
+
+\end{document}

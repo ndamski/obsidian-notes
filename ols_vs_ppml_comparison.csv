@@ -1,0 +1,3 @@
+model,it_share,se,n_obs,zeros_incl,pct_diff_from_ppml
+PPML — includes zeros (M2),-0.5639,0.3217,45647,TRUE,0
+OLS — excludes zeros (M5),-1.4783,0.2355,42305,FALSE,-162.2

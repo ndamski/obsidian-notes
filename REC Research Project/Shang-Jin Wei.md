@@ -1,1 +1,0 @@
-https://business.columbia.edu/faculty/people/shang-jin-wei

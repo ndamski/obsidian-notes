@@ -1,0 +1,224 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{subfig}
+\usepackage{booktabs}
+\usepackage{makecell}
+\usepackage{tabularx}
+
+\title{EU‑ACP Outline}
+\author{Noah Damski}
+\date{February 22, 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This paper examines the relationship between intra-regional trade integration among African, Caribbean, and
+Pacific (ACP) countries and their bilateral trade with the European Union. Using a panel of 78 ACP countries
+across seven regional economic communities from 1995 to 2020, we estimate gravity models that control for standard
+trade determinants and time-varying EPA treatment. We find that higher intra-regional trade shares are associated
+with significantly lower EU-ACP bilateral trade, consistent with a ``stumbling block'' effect of regional
+integration. At the mean intra-regional trade share of 10 percent, bilateral trade is approximately 16 percent
+lower; at the 90th percentile (26 percent), the effect reaches 36 percent. However, Economic Partnership
+Agreements (EPAs) partially offset this negative relationship, suggesting that EU-ACP trade agreements can
+mitigate the trade-diverting effects of regional integration. These findings have important implications for
+understanding the interplay between regional integration and preferential trade arrangements in developing
+countries.
+\end{abstract}
+
+\newpage
+
+\section{Executive Summary of Results}
+An examination of whether intra-regional trade integration among ACP (African,
+Caribbean, Pacific) countries helps or hinders bilateral trade with EU member
+states, and whether in‑force Economic Partnership Agreements (EPAs) change this
+relationship.
+
+\section{Key Findings}
+\begin{enumerate}
+    \item \textbf{Main Result:} Intra‑REC trade share has a
+          \textbf{negative and significant} effect on EU‑ACP bilateral trade
+          (coefficient~$= -1.76$, $p<0.01$). This supports the``stumbling block'' hypothesis—stronger regional
+integration among
+          ACP countries actually reduces their bilateral trade with the EU.
+
+    \item \textbf{EPA Interaction:} The positive and significant interaction
+          term ($0.90$, $p<0.05$) suggests that EPAs partially mitigate the
+          negative effect of regional integration on trade.
+
+    \item \textbf{Trade Direction:} The effect is slightly stronger for EU
+          exports to ACP ($-1.86$) than for ACP exports to EU ($-1.60$).
+
+    \item \textbf{Heterogeneity:} All RECs show negative effects, but with
+          substantial variation—PIF (Pacific Islands) shows the largest
+          negative coefficient ($-29.6$), while Central Africa shows the
+          smallest effect ($-0.81$, not significant).
+\end{enumerate}
+
+\newpage
+
+\section*{OUTLINE}
+
+\begin{enumerate}
+    \item \textbf{INTRODUCTION}
+    \begin{itemize}
+        \item Research question and motivation
+        \item Preview of main findings
+        \item Contribution to literature
+    \end{itemize}
+
+    \item \textbf{INSTITUTIONAL BACKGROUND}
+    \begin{itemize}
+        \item Cotonou Agreement and EPA negotiations
+        \item ACP regional groupings (ECOWAS, SADC, EAC, etc.)
+        \item Timeline of EPA implementation
+    \end{itemize}
+
+    \item \textbf{DATA AND DESCRIPTIVE STATISTICS}
+    \begin{itemize}
+        \item Data sources (BACI, CEPII, WDI)
+        \item Sample construction
+        \item Key variable definitions
+        \item Summary statistics (Table 1)
+    \end{itemize}
+
+    \item \textbf{EMPIRICAL STRATEGY}
+    \begin{itemize}
+        \item Gravity model specification
+        \item Fixed effects rationale
+        \item Identification discussion
+    \end{itemize}
+
+    \item \textbf{MAIN RESULTS}
+    \begin{itemize}
+        \item Baseline gravity (Model 1)
+        \item Main specification with IT Share (Model 2)
+        \item EPA interaction (Model 3)
+        \item Interpretation of magnitudes
+    \end{itemize}
+
+    \item \textbf{MECHANISMS AND HETEROGENEITY}
+    \begin{itemize}
+        \item Trade direction analysis
+        \item REC-by-REC subsamples
+        \item Regional subsamples (Africa/Caribbean/Pacific)
+    \end{itemize}
+
+    \item \textbf{ROBUSTNESS CHECKS}
+    \begin{itemize}
+        \item Sample sensitivity
+        \item Specification alternatives
+        \item OLS vs PPML comparison
+    \end{itemize}
+
+    \item \textbf{CONCLUSION}
+    \begin{itemize}
+        \item \underline{Summary of findings}:
+        \begin{itemize}
+            \item Strong ``stumbling block'' effect exists
+            \item Higher intra‑regional trade $\rightarrow$ lower EU‑ACP bilateral trade
+            \item At mean (10\%): ~16\% lower trade
+            \item At 90th percentile (26\%): ~36\% lower trade
+            \item EPAs partially offset the negative relationship
+        \end{itemize}
+
+        \item \underline{Policy implications}:
+        \begin{itemize}
+            \item Trade agreements must account for regional integration effects
+            \item EPAs can mitigate trade‑diverting effects of RECs
+            \item Important for development policy in developing countries
+        \end{itemize}
+
+        \item \underline{Limitations and future research}:
+        \begin{itemize}
+            \item Data constraints for smaller ACP countries
+            \item Need deeper mechanism exploration
+            \item Could extend to other developing regions
+        \end{itemize}
+    \end{itemize}
+\end{enumerate}
+
+\newpage
+
+
+\begin{table}[t]
+  \centering
+  \caption{Intra-REC Trade Integration and EU-ACP Bilateral Trade}
+  \label{tab:main_results}
+  \vspace{-0.5em}
+  \begin{scriptsize}
+  \begin{tabularx}{\textwidth}{lccccc}
+    \toprule
+    & \makecell{Baseline\\PPML} & \makecell{IT Share\\PPML} & \makecell{IT $\times$ EPA\\PPML} &
+\makecell{IT\\Intensity} & \makecell{IT Share\\OLS} \\
+    \midrule
+    \emph{Variables} \\
+    ln(Distance)     & -1.717$^{***}$ & -1.769$^{***}$ & -1.769$^{***}$ & -1.764$^{***}$ & -1.195$^{***}$ \\
+                      & (0.607)        & (0.639)        & (0.639)        & (0.639)        & (0.240) \\
+    Common Language  & 1.113$^{***}$  & 1.119$^{***}$ & 1.119$^{***}$ & 1.120$^{***}$ & 0.687$^{***}$ \\
+                      & (0.218)        & (0.222)        & (0.222)        & (0.222)        & (0.125) \\
+    Colonial Tie     & 0.205          & 0.186          & 0.186          & 0.184          & 1.251$^{***}$ \\
+                      & (0.228)        & (0.232)        & (0.232)        & (0.232)        & (0.202) \\
+    EPA (=1 in force) & -0.031         & -0.058         & -0.158$^{**}$  & -0.055         & -0.136$^{***}$ \\
+                      & (0.047)        & (0.044)        & (0.066)        & (0.044)        & (0.044) \\
+    Intra-REC Trade Share &        & -1.755$^{***}$ & -1.758$^{***}$ &                & -1.526$^{***}$ \\
+                      &                & (0.384)        & (0.378)        &                & (0.245) \\
+    EPA $\times$ IT Share &           &                & 0.901$^{**}$   &                &                \\
+                      &                &                & (0.422)        &                &                \\
+    Intra-REC Trade Intensity &       &                &                & -0.006$^{***}$ &                \\
+                      &                &                &                & (0.002)        &                \\
+    \midrule
+    \emph{Fixed Effects} \\
+    Exporter $\times$ Year & Yes   & Yes            & Yes            & Yes            & Yes \\
+    ACP Importer          & Yes   & Yes            & Yes            & Yes            & Yes \\
+    Year                  & Yes   & Yes            & Yes            & Yes            & Yes \\
+    \midrule
+    Observations          & 44,054 & 43,238        & 43,238         & 43,238         & 40,334 \\
+    R$^2$                 &        &                &                &                & 0.755 \\
+    \bottomrule
+  \end{tabularx}
+  \end{scriptsize}
+
+  \smallskip
+  \begin{tabularx}{\textwidth}{p{15cm}}
+    \emph{Notes:} Clustered (pair\_id) standard errors in parentheses. $^{***}$ $p<0.01$, $^{**}$ $p<0.05$. \\
+    Columns (1)–(4) estimated via PPML. Column (5) is OLS on logged trade (zeros dropped). \\
+    At the mean IT Share (10\%), column (2) implies a 16\% reduction in bilateral trade; at the 90th percentile
+(26\%), the effect is a 36\% reduction. The EPA interaction in column (3) suggests EPAs partially offset the
+negative regional integration effect.
+  \end{tabularx}
+\end{table}
+
+\newpage
+
+\begin{figure}[htbp]
+    \centering
+    \subfloat[Regional Trends]{%
+        \includegraphics[width=0.45\textwidth]{it_share_time_series.png}%
+        \label{fig:rec_trends}
+}
+    \subfloat[IT Share vs Trade]{%
+        \includegraphics[width=0.45\textwidth]{stumbling_block_scatter.png}%
+        \label{fig:scatter}
+}
+    \caption{Regional Integration and EU-ACP Trade: Descriptive Evidence}
+    \label{fig:descriptive}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \subfloat[REC Heterogeneity]{%
+        \includegraphics[width=0.48\textwidth]{rec_coef_plot.png}%
+}
+    \subfloat[Marginal Effects]{%
+        \includegraphics[width=0.48\textwidth]{marginal_effects_it_share.png}%
+}
+    \caption{Effect of Intra-REC Trade Share on EU-ACP Bilateral Trade}
+    \label{fig:main_results}
+\end{figure}
+
+\end{document}

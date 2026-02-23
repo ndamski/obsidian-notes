@@ -1,0 +1,15 @@
+type,specification,it_coef,it_se,n,pct_change,sig
+Main,M1: Baseline PPML,NA,NA,46160,NA,
+Main,M2: Main PPML,-0.564,0.322,45647,NA,*
+Main,M3: + EPA interaction,-0.625,0.32,45647,NA,*
+Main,M4: IT Intensity,-0.006,0.002,45317,NA,***
+Main,M5: OLS,-1.478,0.235,42305,NA,***
+Direction,D1: ACP exports to EU,-0.059,0.476,45647,NA,
+Direction,D2: EU exports to ACP,-1.027,0.254,45647,NA,***
+Regional,R1: Africa,-0.357,0.336,27951,NA,
+Regional,R2: Caribbean,-2.327,1.006,8895,NA,**
+Regional,R3: Pacific,-30.921,9.213,8801,NA,***
+Regional,R4: Excl. SACU,-1.59,0.403,42682,NA,***
+Marginal,ME: At p10 IT Share,0.005,NA,NA,-0.3,
+Marginal,ME: At mean IT Share,0.116,NA,NA,-6.3,
+Marginal,ME: At p90 IT Share,0.255,NA,NA,-13.4,
