@@ -1,1 +1,1 @@
-(https://www.andrewkrose.net/
+https://www.andrewkrose.net/

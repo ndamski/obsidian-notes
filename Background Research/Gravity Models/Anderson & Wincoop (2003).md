@@ -1,0 +1,2 @@
+
+https://www.researchgate.net/publication/4734065_Gravity_With_Gravitas_A_Solution_to_the_Border_Puzzle
