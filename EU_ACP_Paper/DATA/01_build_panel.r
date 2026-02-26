@@ -8,7 +8,7 @@
 # estimation due to missing gravity covariates for all dyads in that year.
 #
 # Data sources:
-#   - BACI HS92 V202601 (trade flows; 2022 file is loaded but year-filtered below)
+#   - BACI HS92 V202601 (trade flows; annual files loaded for YEARS = 1995:2021)
 #   - CEPII Gravity V202211 (distance, language, colonial tie, contiguity; through 2021)
 #   - World Bank WDI (GDP, population; COK/NIU patched manually through 2021)
 #
@@ -38,7 +38,6 @@ rm(list = ls())
 library(tidyverse)
 library(WDI)
 library(fixest)
-library(countrycode)
 
 # =============================================================================
 # 0. PATHS
@@ -599,6 +598,6 @@ write_csv(rec_summary, paste0(OUT_DIR, "tables/rec_it_share_summary.csv"))
 # =============================================================================
 message("Saving panel...")
 saveRDS(panel, paste0(DATA_DIR, "eu_acp_panel_v3.rds"))
-write_csv(panel,  paste0(DATA_DIR, "eu_acp_panel_v3.csv"))
-message("Done.")
+write_csv(panel, paste0(DATA_DIR, "eu_acp_panel_v3.csv"))
+message("Done. Panel saved as .rds and .csv.")
 

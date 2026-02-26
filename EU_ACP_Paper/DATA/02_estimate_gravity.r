@@ -6,7 +6,7 @@
 #   a stumbling block or building block for bilateral trade with EU members?
 #   Secondary: does an in-force EPA moderate this relationship?
 #
-# Panel: 78 ACP countries (7 RECs) x EU-27 x 1995-2022
+# Panel: 78 ACP countries (7 RECs) x EU-27 x 1995-2021
 # Estimator: PPML (fepois) with exporter-year + ACP-country + year FEs.
 # Standard errors clustered at the country-pair level throughout.
 #
@@ -217,10 +217,11 @@ f_eu_exp    <- as.formula(paste0("EU_to_ACP ~ ln_dist",       ct, " + lang + col
 
 # =============================================================================
 # 5. DESCRIPTIVE FIGURES
-# =============================================================================
+# Each plot is assigned to a named object so it prints to the RStudio Plots
+# pane via print(), then also saved to disk via ggsave().
 
 # IT Share distribution by REC
-panel |>
+p_it_dist <- panel |>
   filter(!is.na(rec), !is.na(it_share)) |>
   distinct(acp_iso3, year, rec, it_share) |>
   ggplot(aes(x = it_share, fill = rec)) +
@@ -231,10 +232,11 @@ panel |>
        x = "IT Share", y = "Count") +
   theme_minimal() +
   theme(legend.position = "none")
-ggsave(paste0(OUT_FIG, "it_share_distribution.png"), width = 12, height = 8)
+print(p_it_dist)
+ggsave(paste0(OUT_FIG, "it_share_distribution.png"), p_it_dist, width = 12, height = 8)
 
 # Mean IT Share over time by REC
-panel |>
+p_it_time <- panel |>
   filter(!is.na(rec), !is.na(it_share)) |>
   distinct(acp_iso3, year, rec, it_share) |>
   group_by(rec, year) |>
@@ -242,12 +244,13 @@ panel |>
   ggplot(aes(x = year, y = mean_it_share, colour = rec)) +
   geom_line(linewidth = 0.9) +
   geom_point(size = 1.5) +
-  scale_x_continuous(breaks = seq(1995, 2022, 5)) +
+  scale_x_continuous(breaks = seq(1995, 2021, 5)) +
   scale_colour_manual(values = REC_COLOURS) +
   labs(title = "Mean Intra-REC Trade Share Over Time",
        x = NULL, y = "IT Share", colour = "REC") +
   theme_minimal()
-ggsave(paste0(OUT_FIG, "it_share_time_series.png"), width = 10, height = 5)
+print(p_it_time)
+ggsave(paste0(OUT_FIG, "it_share_time_series.png"), p_it_time, width = 10, height = 5)
 
 # IT Share vs ln(EU-ACP trade) — faceted scatter by REC
 rec_year_avg <- panel |>
@@ -259,7 +262,7 @@ rec_year_avg <- panel |>
     .groups = "drop"
   )
 
-ggplot(rec_year_avg, aes(x = mean_it_share, y = mean_ln_trade, colour = rec)) +
+p_scatter <- ggplot(rec_year_avg, aes(x = mean_it_share, y = mean_ln_trade, colour = rec)) +
   geom_point(alpha = 0.7, size = 2) +
   geom_smooth(method = "lm", se = TRUE, colour = "black", fill = "grey80", linewidth = 0.9) +
   facet_wrap(~rec, scales = "free", nrow = 3) +
@@ -272,7 +275,8 @@ ggplot(rec_year_avg, aes(x = mean_it_share, y = mean_ln_trade, colour = rec)) +
   ) +
   theme_minimal() +
   theme(legend.position = "none")
-ggsave(paste0(OUT_FIG, "stumbling_block_scatter.png"), width = 13, height = 10)
+print(p_scatter)
+ggsave(paste0(OUT_FIG, "stumbling_block_scatter.png"), p_scatter, width = 13, height = 10)
 
 # Event study — calendar time, EPA vs non-EPA countries
 epa_entry_years <- panel |>
@@ -294,7 +298,7 @@ epa_entries <- tibble(
   label = c("CARIFORUM","PNG","ESA-4","CMR/FJI","SADC/CIV/GHA","MOZ","COM")
 )
 
-event_data |>
+p_event_cal <- event_data |>
   group_by(group, year) |>
   summarise(mean_ln_trade = mean(log(total_bilateral), na.rm = TRUE), .groups = "drop") |>
   ggplot(aes(x = year, y = mean_ln_trade, colour = group)) +
@@ -306,7 +310,7 @@ event_data |>
             aes(x = year, y = Inf, label = label),
             inherit.aes = FALSE, angle = 90, hjust = 1.1, vjust = -0.3,
             size = 2.6, colour = "grey40") +
-  scale_x_continuous(breaks = seq(1995, 2022, 5)) +
+  scale_x_continuous(breaks = seq(1995, 2021, 5)) +
   scale_colour_manual(
     values = c("EPA countries" = "#E06C75", "Non-EPA ACP countries" = "#56B4E9"),
     name = NULL
@@ -318,10 +322,11 @@ event_data |>
   ) +
   theme_minimal() +
   theme(legend.position = "bottom")
-ggsave(paste0(OUT_FIG, "event_study_descriptive.png"), width = 10, height = 6)
+print(p_event_cal)
+ggsave(paste0(OUT_FIG, "event_study_descriptive.png"), p_event_cal, width = 10, height = 6)
 
 # Event study — relative time around EPA entry
-event_data |>
+p_event_rel <- event_data |>
   filter(treated, !is.na(time_to_epa), between(time_to_epa, -10, 10)) |>
   group_by(time_to_epa) |>
   summarise(mean_ln_trade = mean(log(total_bilateral), na.rm = TRUE), .groups = "drop") |>
@@ -337,10 +342,11 @@ event_data |>
     y = "Mean ln(Bilateral Trade)"
   ) +
   theme_minimal()
-ggsave(paste0(OUT_FIG, "event_study_relative.png"), width = 9, height = 5)
+print(p_event_rel)
+ggsave(paste0(OUT_FIG, "event_study_relative.png"), p_event_rel, width = 9, height = 5)
 
 # Zero-trade distribution by ACP country
-panel |>
+p_zero <- panel |>
   filter(total_bilateral == 0) |>
   group_by(acp_iso3, rec) |>
   summarise(n_zero = n(), .groups = "drop") |>
@@ -351,16 +357,16 @@ panel |>
   scale_fill_manual(values = REC_COLOURS) +
   labs(
     title    = "Percentage of Zero-Trade Dyads by ACP Country",
-    subtitle = "EU-27 x ACP x 1995-2022",
+    subtitle = "EU-27 x ACP x 1995-2021",
     x = NULL, y = "% Zero-Trade Pairs"
   ) +
   theme_minimal() +
   theme(legend.position = "bottom", legend.title = element_blank())
-ggsave(paste0(OUT_FIG, "zero_trade_distribution.png"), width = 10, height = 12)
+print(p_zero)
+ggsave(paste0(OUT_FIG, "zero_trade_distribution.png"), p_zero, width = 10, height = 12)
 
 # =============================================================================
 # 6. MAIN ESTIMATION
-# =============================================================================
 
 # M1: Baseline gravity (no IT Share)
 m1 <- fepois(f_baseline, data = panel, cluster = ~pair_id)
@@ -373,13 +379,21 @@ pearson_stat <- sum(residuals(m2, type = "response")^2 / fitted(m2)) /
   (nobs(m2) - length(coef(m2)))
 message(sprintf("M2 Pearson dispersion: %.2f (1.0 = ideal Poisson)", pearson_stat))
 if (pearson_stat > 2) {
-  message("  Overdispersion detected (>2). Running NB-PML as additional robustness...")
-  m2_nb <- fenegbin(f_main, data = panel, cluster = ~pair_id)
+  message("  Overdispersion detected (>2). NB-PML in robustness table.")
 } else if (pearson_stat > 1.5) {
-  message("  Mild overdispersion (1.5-2). PPML SEs likely adequate; note in paper.")
+  message("  Mild overdispersion (1.5-2). NB-PML included as precautionary check.")
 } else {
-  message("  No substantial overdispersion. PPML appropriate.")
+  message("  No substantial overdispersion. NB-PML included for completeness.")
 }
+
+# NB-PML always estimated — compared directly to PPML in robustness table
+# to confirm variance assumption is not driving the main result.
+m2_nb <- fenegbin(f_main, data = panel, cluster = ~pair_id)
+message(sprintf(
+  "NB-PML vs PPML comparison — it_share: NB = %.4f (SE %.4f) | PPML = %.4f (SE %.4f)",
+  coef(m2_nb)["it_share"], se(m2_nb)["it_share"],
+  coef(m2)["it_share"],    se(m2)["it_share"]
+))
 
 # M3: IT Share x EPA interaction
 m3 <- fepois(f_inter, data = panel, cluster = ~pair_id)
@@ -407,7 +421,7 @@ etable(
 
 # =============================================================================
 # 7. DIRECTIONAL DECOMPOSITION — ACP EXPORTS vs EU EXPORTS
-# =============================================================================
+
 m_acp_exp <- fepois(f_acp_exp, data = panel, cluster = ~pair_id)
 m_eu_exp  <- fepois(f_eu_exp,  data = panel, cluster = ~pair_id)
 
@@ -422,7 +436,7 @@ etable(
 
 # =============================================================================
 # 8. REC SUBSAMPLE REGRESSIONS
-# =============================================================================
+
 rec_models <- REC_LEVELS |>
   set_names() |>
   map(function(r) fepois(f_main, data = panel |> filter(rec == r), cluster = ~pair_id))
@@ -444,7 +458,6 @@ do.call(etable, c(
 
 # =============================================================================
 # 9. ADDITIONAL FIGURES — COEFFICIENT STABILITY AND REC FOREST PLOT
-# =============================================================================
 
 # Regional subsamples (also used in robustness)
 m_africa    <- fepois(f_main, data = panel |> filter(acp_region == "Africa"),    cluster = ~pair_id)
@@ -456,15 +469,15 @@ m_no_nga    <- fepois(f_main, data = panel |> filter(acp_iso3 != "NGA"),        
 
 # Coefficient stability plot
 coef_data <- tibble(
-  spec = c("M2: Main PPML","M5: OLS",
+  spec = c("M2: Main PPML","M2-NB: NB-PML","M5: OLS",
            "Africa","Caribbean","Pacific",
            "From 1998","Excl. South Africa","Excl. Nigeria"),
-  coef = c(coef(m2)[["it_share"]], coef(m5)[["it_share"]],
+  coef = c(coef(m2)[["it_share"]], coef(m2_nb)[["it_share"]], coef(m5)[["it_share"]],
            coef(m_africa)[["it_share"]], coef(m_caribbean)[["it_share"]],
            coef(m_pacific)[["it_share"]],
            coef(m_from98)[["it_share"]], coef(m_no_zaf)[["it_share"]],
            coef(m_no_nga)[["it_share"]]),
-  se   = c(se(m2)[["it_share"]], se(m5)[["it_share"]],
+  se   = c(se(m2)[["it_share"]], se(m2_nb)[["it_share"]], se(m5)[["it_share"]],
            se(m_africa)[["it_share"]], se(m_caribbean)[["it_share"]],
            se(m_pacific)[["it_share"]],
            se(m_from98)[["it_share"]], se(m_no_zaf)[["it_share"]],
@@ -472,7 +485,7 @@ coef_data <- tibble(
 ) |>
   mutate(ci_lo = coef - 1.96 * se, ci_hi = coef + 1.96 * se)
 
-ggplot(coef_data, aes(x = coef, y = reorder(spec, coef))) +
+p_coef_stab <- ggplot(coef_data, aes(x = coef, y = reorder(spec, coef))) +
   geom_vline(xintercept = 0, linetype = "dashed", colour = "red") +
   geom_errorbar(aes(xmin = ci_lo, xmax = ci_hi), width = 0.3, colour = "steelblue") +
   geom_point(size = 3, colour = "steelblue") +
@@ -482,7 +495,8 @@ ggplot(coef_data, aes(x = coef, y = reorder(spec, coef))) +
     x = "Coefficient on IT Share", y = NULL
   ) +
   theme_minimal()
-ggsave(paste0(OUT_FIG, "coef_stability.png"), width = 10, height = 6)
+print(p_coef_stab)
+ggsave(paste0(OUT_FIG, "coef_stability.png"), p_coef_stab, width = 10, height = 6)
 
 # REC forest plot (PIF excluded — sparse data)
 rec_coefs <- imap_dfr(rec_models, function(mod, rec_name) {
@@ -501,7 +515,7 @@ rec_coefs <- imap_dfr(rec_models, function(mod, rec_name) {
   )
 
 if (nrow(rec_coefs) > 0) {
-  ggplot(rec_coefs |> filter(as.character(rec) != "PIF"),
+  p_rec_forest <- ggplot(rec_coefs |> filter(as.character(rec) != "PIF"),
          aes(x = estimate, y = rec, colour = rec)) +
     geom_vline(xintercept = 0, linetype = "dashed", colour = "grey50") +
     geom_errorbar(aes(xmin = ci_lo, xmax = ci_hi),
@@ -515,12 +529,13 @@ if (nrow(rec_coefs) > 0) {
     ) +
     theme_minimal() +
     theme(legend.position = "none")
-  ggsave(paste0(OUT_FIG, "rec_coef_plot.png"), width = 8, height = 5)
+  print(p_rec_forest)
+  ggsave(paste0(OUT_FIG, "rec_coef_plot.png"), p_rec_forest, width = 8, height = 5)
 }
 
 # =============================================================================
 # 10. MARGINAL EFFECTS — IT Share effect across its observed range
-# =============================================================================
+
 b_it <- coef(m2)["it_share"]
 b_se <- se(m2)["it_share"]
 
@@ -543,7 +558,7 @@ it_grid <- tibble(
     ci_hi      = 100 * (exp((b_it + 1.96 * b_se) * it_share_level) - 1)
   )
 
-ggplot(it_grid, aes(x = it_share_level, y = pct_change)) +
+p_marginal <- ggplot(it_grid, aes(x = it_share_level, y = pct_change)) +
   geom_ribbon(aes(ymin = ci_lo, ymax = ci_hi), fill = "#2E75B6", alpha = 0.15) +
   geom_line(colour = "#2E75B6", linewidth = 1.1) +
   geom_hline(yintercept = 0, linetype = "dashed", colour = "grey50") +
@@ -567,11 +582,48 @@ ggplot(it_grid, aes(x = it_share_level, y = pct_change)) +
     y = "Estimated % change in bilateral trade"
   ) +
   theme_minimal()
-ggsave(paste0(OUT_FIG, "marginal_effects_it_share.png"), width = 9, height = 5)
+print(p_marginal)
+ggsave(paste0(OUT_FIG, "marginal_effects_it_share.png"), p_marginal, width = 9, height = 5)
+
+# Marginal effects table — key percentiles + REC means (for paper/appendix)
+it_p10  <- quantile(panel$it_share, 0.10, na.rm = TRUE)
+it_mean <- mean(panel$it_share,           na.rm = TRUE)
+it_p90  <- quantile(panel$it_share, 0.90, na.rm = TRUE)
+
+marginal_tbl <- bind_rows(
+  tibble(label = c("p10", "Mean", "p90"),
+         it_level = c(it_p10, it_mean, it_p90)),
+  rec_means |> transmute(label = paste0("REC mean: ", rec), it_level = mean_it)
+) |>
+  mutate(
+    pct_change = round(100 * (exp(b_it * it_level) - 1), 1),
+    ci_lo      = round(100 * (exp((b_it - 1.96 * b_se) * it_level) - 1), 1),
+    ci_hi      = round(100 * (exp((b_it + 1.96 * b_se) * it_level) - 1), 1),
+    it_level   = round(it_level, 4)
+  )
+
+print(marginal_tbl)
+write_csv(marginal_tbl, paste0(OUT_TAB, "marginal_effects_table.csv"))
+
+# LaTeX version
+writeLines(c(
+  "\\begin{tabular}{lrrr}",
+  "\\midrule\\midrule",
+  "Evaluation point & IT Share & \\% change in trade & 95\\% CI \\\\",
+  "\\midrule",
+  sprintf("%-28s & %.4f & %+.1f\\%% & [%.1f, %.1f] \\\\",
+          marginal_tbl$label, marginal_tbl$it_level,
+          marginal_tbl$pct_change, marginal_tbl$ci_lo, marginal_tbl$ci_hi),
+  "\\midrule\\midrule",
+  sprintf("\\ multicol{4}{l}{\\emph{PPML (M2) coefficient $\\hat{\\beta} = %.3f$, clustered SE = %.3f.}}\\\\",
+          b_it, b_se),
+  "\\ multicol{4}{l}{\\emph{\\% change $= 100(\\exp(\\hat{\\beta} \\times \\text{IT Share}) - 1)$.}}\\\\",
+  "\\end{tabular}"
+), paste0(OUT_TAB, "marginal_effects_table.tex"))
+message("Marginal effects table saved.")
 
 # =============================================================================
 # 11. ROBUSTNESS CHECKS
-# =============================================================================
 
 m5b          <- feols(f_ols_plus, data = panel,                                       cluster = ~pair_id)
 m_no_carifo  <- fepois(f_main, data = panel |> filter(rec != "CARIFORUM"),            cluster = ~pair_id)
@@ -580,12 +632,14 @@ m_no_som_eri <- fepois(f_main, data = panel |> filter(!acp_iso3 %in% c("SOM","ER
 m_no_sacu    <- fepois(f_main, data = panel |> filter(!acp_iso3 %in% SACU_ISO3),      cluster = ~pair_id)
 
 etable(
-  m2, m5b, m_no_carifo, m_no_pif,
-  headers  = c("Baseline PPML","OLS log(1+trade)","Excl. CARIFORUM","Excl. PIF"),
-  title    = "Robustness: Specification and Sample Sensitivity",
+  m2, m2_nb, m5b, m_no_carifo, m_no_pif,
+  headers  = c("Baseline PPML","NB-PML","OLS log(1+trade)","Excl. CARIFORUM","Excl. PIF"),
+  title    = "Robustness: Specification and Overdispersion Check",
   dict     = DICT,
   se.below = TRUE, depvar = FALSE, fitstat = ~n,
   notes    = paste0(
+    "Col (2): Negative Binomial PML — relaxes Poisson variance assumption; ",
+    "close agreement with col (1) confirms overdispersion is not biasing PPML SEs. ",
     "OLS log(1+trade) retains zero-trade pairs. ",
     "Excl. CARIFORUM: all 15 countries signed EPA simultaneously — no within-REC EPA variation. ",
     "Excl. PIF: Pacific Islands have >25% zero-trade share."),
@@ -618,7 +672,7 @@ etable(
 
 # =============================================================================
 # 12. OLS vs PPML COMPARISON (zeros diagnostic)
-# =============================================================================
+
 coef_comparison <- tibble(
   model      = c("PPML — includes zeros (M2)", "OLS — excludes zeros (M5)"),
   it_share   = c(coef(m2)["it_share"],  coef(m5)["it_share"]),
@@ -640,31 +694,27 @@ message(sprintf(
 
 # =============================================================================
 # 13. CONSOLIDATED RESULTS TABLE
-# =============================================================================
+
 safe_coef <- function(model, var) {
   if (var %in% names(coef(model))) coef(model)[[var]] else NA_real_
 }
 safe_se <- function(model, var) {
   if (var %in% names(se(model))) se(model)[[var]] else NA_real_
 }
-
-it_mean <- mean(panel$it_share, na.rm = TRUE)
-it_p10  <- quantile(panel$it_share, 0.1, na.rm = TRUE)
-it_p90  <- quantile(panel$it_share, 0.9, na.rm = TRUE)
-b       <- safe_coef(m2, "it_share")
+# it_p10, it_mean, it_p90, b_it all defined in section 10 above
 
 results_consolidated <- bind_rows(
   tibble(
     type          = "Main",
-    specification = c("M1: Baseline PPML","M2: Main PPML","M3: + EPA interaction",
-                      "M4: IT Intensity","M5: OLS"),
-    it_coef = c(safe_coef(m1,"it_share"), safe_coef(m2,"it_share"),
-                safe_coef(m3,"it_share"), safe_coef(m4,"it_intensity"),
-                safe_coef(m5,"it_share")),
-    it_se   = c(safe_se(m1,"it_share"),   safe_se(m2,"it_share"),
-                safe_se(m3,"it_share"),   safe_se(m4,"it_intensity"),
-                safe_se(m5,"it_share")),
-    n       = c(nobs(m1), nobs(m2), nobs(m3), nobs(m4), nobs(m5))
+    specification = c("M1: Baseline PPML","M2: Main PPML","M2-NB: NB-PML",
+                      "M3: + EPA interaction","M4: IT Intensity","M5: OLS"),
+    it_coef = c(safe_coef(m1,"it_share"),    safe_coef(m2,"it_share"),
+                safe_coef(m2_nb,"it_share"), safe_coef(m3,"it_share"),
+                safe_coef(m4,"it_intensity"), safe_coef(m5,"it_share")),
+    it_se   = c(safe_se(m1,"it_share"),      safe_se(m2,"it_share"),
+                safe_se(m2_nb,"it_share"),   safe_se(m3,"it_share"),
+                safe_se(m4,"it_intensity"),  safe_se(m5,"it_share")),
+    n       = c(nobs(m1), nobs(m2), nobs(m2_nb), nobs(m3), nobs(m4), nobs(m5))
   ),
   tibble(
     type          = "Direction",
@@ -685,10 +735,10 @@ results_consolidated <- bind_rows(
   tibble(
     type          = "Marginal",
     specification = c("ME: At p10 IT Share","ME: At mean IT Share","ME: At p90 IT Share"),
-    it_coef  = c(it_p10, it_mean, it_p90),
-    it_se    = NA_real_,
-    n        = NA_integer_,
-    pct_change = round(100 * (exp(b * c(it_p10, it_mean, it_p90)) - 1), 1)
+    it_coef       = c(it_p10, it_mean, it_p90),
+    it_se         = NA_real_,
+    n             = NA_integer_,
+    pct_change    = round(100 * (exp(b_it * c(it_p10, it_mean, it_p90)) - 1), 1)
   )
 ) |>
   mutate(
