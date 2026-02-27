@@ -13,15 +13,25 @@ Baier et al. ([2014](https://link.springer.com/article/10.1007/s11079-022-09685-
 Similar to the approach in Baier et al. ([2014](https://link.springer.com/article/10.1007/s11079-022-09685-3#ref-CR8 "Baier SL, Bergstrand JH, Feng M (2014) Economic integration agreements and the margins of international trade. J Int Econ 93(2):339–350")), Baier et al. ([2018](https://link.springer.com/article/10.1007/s11079-022-09685-3#ref-CR7 "Baier SL, Bergstrand JH, Clance MW (2018) Heterogeneous effects of economic integration agreements. J Dev Econ 135(C):587–608")), employing a Melitz-style model, provide evidence that heterogeneity exists across the agreements and that the heterogeneity can be associated with lower fixed trade costs versus marginal trade costs. Baier et al. ([2019](https://link.springer.com/article/10.1007/s11079-022-09685-3#ref-CR9 "Baier SL, Yotov Y, Zylkin T (2019) On the widely differing effects of free trade agreements: lessons from twenty years of trade integration. J Int Econ 116(C):206–226")) use a two-stage approach to account for the heterogeneity in trade agreements. In the first stage, they estimate a gravity equation to measure the trade impact by agreement. They then use these estimates to identify economic, geographical, and political factors associated with the agreements.
 
 
-## [Economic integration agreements and the margins of international trade](https://www.sciencedirect.com/science/article/pii/S0022199614000506#section-cited-by)
+[Economic integration agreements and the margins of international trade](https://www.sciencedirect.com/science/article/pii/S0022199614000506#section-cited-by)
 
-## [Estimating the effects of free trade agreements on international trade flows using matching econometrics](https://www.sciencedirect.com/science/article/pii/S0022199608000998)
+[Estimating the effects of free trade agreements on international trade flows using matching econometrics](https://www.sciencedirect.com/science/article/pii/S0022199608000998)
 
-## [Heterogeneous effects of economic integration agreements](https://www.sciencedirect.com/science/article/pii/S0304387818304644?via%3Dihub)
+[Heterogeneous effects of economic integration agreements](https://www.sciencedirect.com/science/article/pii/S0304387818304644?via%3Dihub)
 
-## [Economic Integration Agreements: Historical database of entry into Economic Integration Agreements, 1960-2000 (ICPSR 29762)](https://www.icpsr.umich.edu/web/ICPSR/studies/29762)
+ [Economic Integration Agreements: Historical database of entry into Economic Integration Agreements, 1960-2000 (ICPSR 29762)](https://www.icpsr.umich.edu/web/ICPSR/studies/29762)
 
-## [Do Economic Integration Agreements Increase Members' Migration? Accounting for Migration in Trade Agreements](https://onlinelibrary.wiley.com/doi/10.1111/roie.12810)
+ [Do Economic Integration Agreements Increase Members' Migration? Accounting for Migration in Trade Agreements](https://onlinelibrary.wiley.com/doi/10.1111/roie.12810)
 
+[On the widely differing effects of free trade agreements: Lessons from twenty years of trade integration]([https://www.sciencedirect.com/science/article/abs/pii/S0022199618304367#s0075](https://www.sciencedirect.com/science/article/abs/pii/S0022199618304367#s0075) with [[Yoto Yotov]]
 
-[https://www.sciencedirect.com/science/article/abs/pii/S0022199618304367#s0075](https://www.sciencedirect.com/science/article/abs/pii/S0022199618304367#s0075) with [[Yoto Yotov]]
+[Economic determinants of free trade agreements](https://www.sciencedirect.com/science/article/pii/S0022199603000795?via%3Dihub)
+
+[Do free trade agreements actually increase members' international trade?](https://www.sciencedirect.com/science/article/pii/S0022199606000596?via%3Dihub)
+
+[The History of African Development](https://www.aehnetwork.org/textbook/)
+
+[What Do Trade Agreements Really Do?](https://www.jstor.org/stable/26409425?searchText=&searchUri=&ab_segments=&searchKey=&refreqid=fastly-default%3Adec3c010b856411a3ce402a273504882&initiator=recommender&seq=1)
+
+[Economic Integration among Developed, Developing and Centrally Planned Economies: A Comparative Analysis](https://www.jstor.org/stable/1924798?origin=crossref&seq=3)
+
