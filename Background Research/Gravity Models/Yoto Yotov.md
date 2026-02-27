@@ -1,10 +1,7 @@
+http://www.robertcfeenstra.com/
 
 
-[Yoto Yotov](https://yotoyotov.com/book.html)
-[A Practical Guide to Trade Policy Analysis](https://www.wto.org/english/res_e/publications_e/practical_guide12_e.htm)
-[An Advanced Guide to Trade Policy Analysis: The Structural Gravity Model](https://www.wto.org/english/res_e/publications_e/advancedguide2016_e.htm)
+[Integration of Trade and Disintegration of Production in the Global Economy](https://pubs.aeaweb.org/doi/pdfplus/10.1257/jep.12.4.31)
 
-***
-## [Economic integration agreements, border effects, and distance elasticities in the gravity equation](https://www.sciencedirect.com/science/article/pii/S0014292115000847)
+Merchandise trade is measured as the average of imports and exports, but the comparisons there are for industrial countries, which have had increasing shares of their economies devoted to services rather than ‘‘merchandise’’ trade like manufacturing, mining and agriculture. To offer a different perspective, we measure merchandise trade relative to merchandise value-added, as Irwin (1996) does for the United States. Information of this type for various industrial countries is contained in Table 2. There are still two countries for which the ratio of merchandise trade to merchandise value-added was larger in 1913 than in 1990 (Japan and the United Kingdom) and one other for which this ratio changed little (Australia). But all the other countries have experienced substantial growth in trade relative to merchandise value-added since 1913: this ratio has increased by about one-third for Denmark and Norway and by three-quarters for Canada; has doubled for France, Germany, Italy, and Sweden; and has nearly tripled for the United States. Merchandise trade has indeed grown substantially relative to the production of these commodities in many countries. **Merchandise trade is measured as the average of imports and exports, except as noted below. Merchandise value-added combines agriculture, mining and manufacturing for the U.S., and these sectors plus construction and public utilities for most other countries.** 
 
-## Gravity

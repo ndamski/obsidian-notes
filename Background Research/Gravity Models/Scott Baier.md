@@ -1,5 +1,7 @@
 https://scholar.google.com/citations?user=mR7hSlcAAAAJ&hl=en
 
+https://sbaier.wixsite.com/scottbaier
+
 
 ## [Using Machine Learning to Capture Heterogeneity in Trade Agreements](https://link.springer.com/article/10.1007/s11079-022-09685-3)
 
@@ -21,3 +23,5 @@ Similar to the approach in Baier et al. ([2014](https://link.springer.com/articl
 
 ## [Do Economic Integration Agreements Increase Members' Migration? Accounting for Migration in Trade Agreements](https://onlinelibrary.wiley.com/doi/10.1111/roie.12810)
 
+
+[https://www.sciencedirect.com/science/article/abs/pii/S0022199618304367#s0075](https://www.sciencedirect.com/science/article/abs/pii/S0022199618304367#s0075) with [[Yoto Yotov]]

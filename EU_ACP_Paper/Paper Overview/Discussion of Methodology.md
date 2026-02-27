@@ -1,4 +1,5 @@
 
+View [[Results]]
 ## EPAs
 [Current ACP-EU trade arrangements](https://eur-lex.europa.eu/EN/legal-content/glossary/african-caribbean-and-pacific-acp-group-of-states.html) are based upon **economic partnership agreements**. These link the EU to ACP countries in seven regional groupings. With that being said, there is not complete overlap between the regional structure of the OACPS and existing EPAs.
 
