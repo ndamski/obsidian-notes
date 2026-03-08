@@ -1,5 +1,12 @@
 https://scholar.google.com/citations?user=JsnqRNoAAAAJ&hl=en
 
+https://users.ugent.be/~sastanda/index.html
+
+## [Historical trade integration: globalization and the distance puzzle in the long twentieth century](https://link.springer.com/article/10.1007/s11698-015-0130-5)
+
+## [(Don’t) Fear The Regional Organization](https://cris.unu.edu/sites/cris.unu.edu/files/WP25.02_Alc%C3%A1zar%20et%20al..pdf)
+
+
 ## [Multilateral trade agreements in Africa](https://link.springer.com/article/10.1007/s10101-015-0167-8)
 
 The argument of long-term economies of scale (or dynamic effects) also has some flaws. First of all, even if we were to unite all sub-Saharan markets, the combined GDP would still be small, especially given the size of the African continent. For instance, in 2009 the combined GDP of all sub-Saharan countries roughly equaled that of the state of New York. Secondly, to fully integrate a slew of problems would have to be conquered: different languages, currencies, rules and regulations, practically non-existent transnational transportation facilities, etc. Circumventing or breaking down these barriers to trade is extremely expensive in time, money and human capital (Foroutan and Pritchett [1993](https://link.springer.com/article/10.1007/s10101-015-0167-8#ref-CR11 "Foroutan F, Pritchett L (1993) Intra-sub-saharan african trade: is it too little? J Afr Econ 2(1):74–105")). In short, the cost of attaining the level of integration that is needed to produce economies of scale outweighs its benefits in the short and medium-long term.

@@ -1,4 +1,4 @@
-[A Contribution to the Empirics of Endogenous Growth](https://www.jstor.org/stable/40325734) Dinopoulos
+[A Contribution to the Empirics of Endogenous Growth](https://www.jstor.org/stable/40325734) 
 
 [Growth-Creating Trading Blocs](https://www.jstor.org/stable/136070)
 

@@ -22,12 +22,11 @@
 ---
 
 
-## III. Regional Integration: Theory, Growth & Development (General)
+## II. Regional Integration: Theory, Growth & Development (General)
 
 > Theoretical and cross-country empirical work on integration and development outcomes.
 
 - [Regional integration and economic development: A theoretical approach](https://www.econstor.eu/handle/10419/94049)
-- [Regional integration and economic development: An empirical approach](https://www.econstor.eu/handle/10419/93737)
 - [Regional Integration, Growth and Convergence](https://www.jstor.org/stable/23000906)
 - [Regional Integration and Growth in Developing Nations](https://www.jstor.org/stable/23000518)
 - [Growth Effects of Economic Integration: Evidence from the EU Member States](https://www.jstor.org/stable/40441034)
@@ -39,7 +38,7 @@
 
 ---
 
-## IV. European Integration
+## III. [[European Integration
 
 > EU, EFTA, and European-model specific literature.
 
@@ -50,7 +49,7 @@
 
 ---
 
-## V. Africa: Regional Integration & Trade
+## IV. [[African Integration]]
 
 > Literature on African RTAs, intra-African trade, and integration challenges.
 
@@ -69,7 +68,7 @@
 
 ---
 
-## VI. Finance, Banking & Trade
+## V. Finance, Banking & Trade
 
 > Work on the intersection of financial development, banking, and trade flows.
 
@@ -80,13 +79,13 @@
 
 ---
 
-## VII. Asia & Other Regions
+## VI. Asia & Other Regions
 
 - [Intraregional Trade in Emerging Asia](https://www.imf.org/external/pubs/ft/pdp/2004/pdp01.pdf)
 
 ---
 
-## VIII. Google Scholar Search Links
+## VII. Google Scholar Search Links
 
 - [Related articles — RTA & Financial Development](https://scholar.google.com/scholar?q=related:fUOOfNQpHwkJ:scholar.google.com/&hl=en&as_sdt=0,10)
 - [Citing articles — 2025 onwards](https://scholar.google.com/scholar?as_ylo=2025&hl=en&as_sdt=40005&sciodt=0,10&cites=14165608376572954492&scipsc=)
