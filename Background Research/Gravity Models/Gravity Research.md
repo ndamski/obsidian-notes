@@ -12,6 +12,7 @@
 - [Gravity, globalization and time-varying heterogeneity](https://www.sciencedirect.com/science/article/pii/S0014292124000084) — uses methodologies of [[Scott Baier]] & [[Samuel Standaert]]
 - [Towards an Exhaustive Regional Integration Agreements Database](https://cris.unu.edu/sites/cris.unu.edu/files/UNU-CRIS_Working-Paper_Miller_and_Standaert_23.02.pdf) — Miller & [[Samuel Standaert]]
 - [Essays on Regional Trade Agreements and International Trade](https://theses.hal.science/tel-02414104/)
+- [Estimating gravity coefficients with multiple layers of heterogeneity](https://onlinelibrary.wiley.com/doi/abs/10.1111/roie.12721)
 
 ---
 

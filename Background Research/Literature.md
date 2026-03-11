@@ -17,8 +17,8 @@
 - [The Effect of the EEC and EFTA on European Trade: A Temporal Cross-Section Analysis](https://www.jstor.org/stable/1813911) — Norman D. Aitken _(AER, 1973)_
 - [Methodology for Impact Assessment of Free Trade Agreements](https://www.adb.org/sites/default/files/publication/28929/impact-assessment-fta.pdf)
 - [Multilateral trade agreements as a basis for foreign economic cooperation by the example of EU countries](https://www.researchgate.net/profile/Saule-Kargabayeva-3/publication/392408982_Multilateral_trade_agreements_as_a_basis_for_foreign_economic_cooperation_by_the_example_of_EU_countries/links/68596554b8078e0c248edb06/Multilateral-trade-agreements-as-a-basis-for-foreign-economic-cooperation-by-the-example-of-EU-countries.pdf)
+- [Multilateralism in the Twenty-First Century](https://online.ucpress.edu/gp/article/4/1/68310/195239/Multilateralism-in-the-Twenty-First-Century)
 - [Assessing the Association Between Trade and Regional Trade Agreements: A Network Approach](https://www.jstor.org/stable/27327174)
-
 ---
 
 
@@ -35,10 +35,12 @@
 - [TRADE LIBERALIZATION, INVESTMENT AND GROWTH](https://www.jstor.org/stable/41624119)
 - [Free Trade, Growth, and Convergence](https://www.jstor.org/stable/40215979)
 - [The Contribution of Intra-Regional and Extra-Regional Trade to Growth: Evidence from the European Union](https://www.jstor.org/stable/23001116)
+- [Estimating gravity coefficients with multiple layers of heterogeneity](https://cris.maastrichtuniversity.nl/ws/portalfiles/portal/1201289/guid-96671fdd-2b30-4a17-88a7-834f99cca3a5-ASSET1.0.pdf)
+- [International Trade Agreements: Laboratories of Innovation or Propellers of Fragmentation?](https://academic.oup.com/jiel/article-abstract/26/1/110/6964502?redirectedFrom=fulltext)
 
 ---
 
-## III. [[European Integration
+## III. [[European Integration]]
 
 > EU, EFTA, and European-model specific literature.
 
@@ -50,24 +52,6 @@
 ---
 
 ## IV. [[African Integration]]
-
-> Literature on African RTAs, intra-African trade, and integration challenges.
-
-- [African Regional Trade Agreements and Intra-African Trade](https://www.jstor.org/stable/26418780)
-- [The Impact of Multilateral Trade Agreements on Intra-Regional Trade: A Case of ECOWAS](https://www.jstor.org/stable/27248537)
-- [Africa and the Challenges of Regional Integration](https://www.jstor.org/stable/26885837)
-- [Southern African Regional and Economic Integration: The Free Trade Zone Strategy for South Africa?](https://www.jstor.org/stable/26889810)
-- [Regional Economic Integration and the Governance Challenge in Africa: Missing Links in the African Peer Review Mechanism](https://www.jstor.org/stable/90013869)
-- [Themes and Concepts of Region-Building and Regional Integration in Africa](https://www.jstor.org/stable/resrep05162.6)
-- [Region-Building in Africa — Political and Economic Challenges](https://link.springer.com/book/10.1057/9781137586117)
-- [AfCFTA: Africa is moving too slowly towards a single market](https://blogs.lse.ac.uk/africaatlse/2019/02/11/afcfta-africa-is-moving-too-slowly-towards-a-single-market/)
-- [Intra-regional Trade and African Economic Integration](https://www.aehnetwork.org/wp-content/uploads/2020/08/Yaduma_Khan_Intra_Regional_integration.pdf)
-- [Intraregional Trade and Restrictions on the Movement of People](https://www.brookings.edu/wp-content/uploads/2016/07/01_intraregional_trade_kimenyi.pdf)
-- [Financial sector development and intra-African trade](https://www.sciencedirect.com/science/article/pii/S1042443125000666)
-- [Key statistics and trends in regional trade in Africa — UNCTAD 2019](https://digitallibrary.un.org/record/3813156?ln=en&v=pdf)
-
----
-
 ## V. Finance, Banking & Trade
 
 > Work on the intersection of financial development, banking, and trade flows.
